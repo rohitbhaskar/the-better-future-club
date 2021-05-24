@@ -5,6 +5,12 @@ body,html {
   width: 100%;
 }
 
+.topbar-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .example-wrapper {
   /* width: 382px;
   height: 630px; */
