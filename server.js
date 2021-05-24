@@ -8,6 +8,9 @@ const app = express(),
 //allow OPTIONS on all resources
 app.options('*', cors())
 
+// mock data
+const mockData = require('./mock-data.json');
+
 const users = [];
 
 const heroes = [
@@ -36,12 +39,16 @@ app.post('/api/user', (req, res) => {
   res.json("user addedd");
 });
 
-app.get('/api/heroes', cors(), (req, res) => {
-  res.json(heroes);
+app.get('/api/tasks', cors(), (req, res) => {
+  res.json(mockData.mockTaskData);
 });
 
-app.get('/api/heroes/:id', cors(), (req, res) => {
-  res.json(heroes.find(hero => hero.id == parseInt(req.params.id)));
+// app.get('/api/tasks/:user', cors(), (req, res) => {
+//   res.json(mockData.mockTaskData.filter(tasks => tasks.allocatedTo == req.params.user));
+// });
+
+app.get('/api/tasks/:id', cors(), (req, res) => {
+  res.json(mockData.mockTaskData.find(task => task.id == parseInt(req.params.id)));
 });
 
 app.put('/api/heroes', cors(), (req, res) => {

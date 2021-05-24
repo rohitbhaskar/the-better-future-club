@@ -1,0 +1,30 @@
+{
+  "mockTaskData": [
+    {
+      "id": 1,
+      "title": "Create a brochure for an online event",
+      "details": "There is a live online event to be hosted on the 1st of June, 2021. We need help creating a brochure that highlights our achievements. More details are available here: http://wit.org.in/",
+      "company": "Women's Trust India",
+      "purpose": "Women Empowerment",
+      "initials": "WE",
+      "points": 10,
+      "createdDate": "2021-05-23T13:15:00.000Z",
+      "updatedDate": "2021-05-23T16:30:00.000Z",
+      "allocatedTo": "rohitb1vs10",
+      "status": "allocated"
+    },
+    {
+      "id": 2,
+      "title": "Create an image for our social media",
+      "details": "We are launching a new social initiate to enable people to donate for the Covid patients in Dharavi, Mumbai. We need help creating a social media post for it. More details are available here: https://www.careindia.org/",
+      "company": "Care India",
+      "initials": "CI",
+      "purpose": "Poverty",
+      "points": 5,
+      "createdDate": "2021-05-22T18:45:00.000Z",
+      "updatedDate": "2021-05-23T16:30:00.000Z",
+      "allocatedTo": "rohitb1vs10",
+      "status": "unallocated"
+    }
+  ]
+}
