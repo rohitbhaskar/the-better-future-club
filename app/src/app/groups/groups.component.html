@@ -1,16 +1,14 @@
 <div class="wrapper">
-  <h4>Groups</h4>
-  <div class="title">11/5 Monday</div>
-  <div class="calendar-entry">
-      <span class="hour">16:00</span>
-      <div class="separator" style="border-color:#FF6358"></div>
-      <span class="text">Job interview for internal position</span>
+  <h4>Your Groups 👋</h4>
+  <div *ngFor="let group of groups">
+    <hr style="margin:30px 0">
+    <div class="message-wrapper">
+      <kendo-avatar shape="circle" initials="{{ group.initials }}"></kendo-avatar>
+      <div>
+        <span class="message">{{ group.name }}</span>
+        <span class="message" style="font-style: oblique; font-size: small;">{{ group.details }}</span>
+      </div>
+      <span style="margin-left: auto;">[ {{ group.messages }} ]</span>
+    </div>
   </div>
-  <div class="calendar-entry">
-      <span class="hour">21:00</span>
-      <div class="separator" style="border-color:#28B4C8"></div>
-      <span class="text">Martha Birthday</span>
-  </div>
-  <div class="title">Tomorrow</div>
-  <div class="events">No upcoming events</div>
 </div>

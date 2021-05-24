@@ -7,39 +7,25 @@
   margin: 0 auto;
 }
 
-.title {
-  background: #EDEDED;
-  font-weight: 600;
-  color: black;
-  padding: 5px;
-  margin-bottom: 17px;
-  margin-top: 30px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.calendar-entry {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.hour {
-  color: #BABABA;
-}
-
-.events {
+.message-wrapper {
+  display: inline-flex;
+  text-decoration: none;
   width: 100%;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  text-justify: center;
-  color: #BABABA;
 }
 
-.separator {
-  border-left:2px solid #FF6358;
-  height:23px;
-  margin-left: 20px;
-  margin-right: 12px;
+kendo-avatar {
+  margin-right: 20px;
+}
+
+.message {
+  color: #656565;
+  display: block;
+  text-align: justify;
+  padding-right: 10px;
+}
+
+h6 {
+  font-weight: 500;
+  color: black;
+  margin-bottom: 25px;
 }

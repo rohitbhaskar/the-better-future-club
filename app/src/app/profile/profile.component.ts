@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
     templateUrl: './profile.component.html'
 })
 export class ProfileComponent {
-    public kendokaAvatar = 'https://www.telerik.com/kendo-angular-ui-develop/components/navigation/appbar/assets/kendoka-angular.png';
+    public kendokaAvatar = 'https://i.imgur.com/NRgYxRu.jpg';
 
    public entries = [
-       { title: 'Work', color: '#FF6358' },
-       { title: 'Family', color: '#28B4C8' },
-       { title: 'Birthdays', color: '#FFC000' }
+       { title: 'Preferences', color: '#FF6358', icon:'saturation' },
+       { title: 'Achievements', color: '#28B4C8', icon:'star' },
+       { title: 'Settings', color: '#FFC000', icon:'gear' }
    ];
 }
