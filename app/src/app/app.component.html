@@ -1,8 +1,55 @@
-<kendo-appbar positionMode="fixed" class="title-app-bar">
+<kendo-appbar *ngIf="showMobile" positionMode="fixed" class="title-app-bar">
   <kendo-appbar-section style="width:100%">
     <div class="topbar-logo">
       <img src="https://i.imgur.com/U8qIPNn.png" width="200px">
     </div>
+  </kendo-appbar-section>
+</kendo-appbar>
+
+<kendo-appbar class="desktop-topnav" *ngIf="!showMobile"  [position]="'top'">
+  <kendo-appbar-section>
+    <button class="k-button k-button-clear">
+      <kendo-icon [name]="'menu'"></kendo-icon>
+    </button>
+  </kendo-appbar-section>
+
+  <kendo-appbar-section>
+    <img src="https://i.imgur.com/U8qIPNn.png" width="200px">
+  </kendo-appbar-section>
+
+  <kendo-appbar-spacer [width]="'32px'"></kendo-appbar-spacer>
+
+  <kendo-appbar-section>
+    <ul>
+      <li [routerLink]="['']"><span>Tasks</span></li>
+      <li [routerLink]="['/groups']"><span>Groups</span></li>
+    </ul>
+  </kendo-appbar-section>
+
+  <kendo-appbar-spacer></kendo-appbar-spacer>
+
+  <kendo-appbar-section class="actions">
+    <kendo-badge-container>
+      <button class="k-button k-button-clear">
+        <kendo-icon [name]="'bell'"></kendo-icon>
+      </button>
+      <kendo-badge
+        [shape]="'dot'"
+        [themeColor]="'warning'"
+        [size]="'small'"
+        [position]="'inside'"
+      ></kendo-badge>
+    </kendo-badge-container>
+    <span class="k-appbar-separator"></span>
+  </kendo-appbar-section>
+
+  <kendo-appbar-section [routerLink]="['/profile']">
+    <kendo-avatar
+      [imageSrc]="kendokaAvatar"
+      [shape]="'circle'"
+      [width]="'26px'"
+      [height]="'26px'"
+    ></kendo-avatar>
   </kendo-appbar-section>
 </kendo-appbar>
 
@@ -12,6 +59,7 @@
       [items]="items"
       positionMode="fixed"
       [border]="true"
-      (select)="onSelect($event)">
+      (select)="onSelect($event)"
+      *ngIf="showMobile">
   </kendo-bottomnavigation>
 </div>

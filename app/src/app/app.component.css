@@ -53,3 +53,28 @@ h4 {
 }
 
 
+
+.desktop-topnav .title {
+  font-size: 18px;
+  margin: 0;
+}
+.desktop-topnav kendo-badge-container {
+  margin-right: 8px;
+}
+.desktop-topnav ul {
+  font-size: 14px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.desktop-topnav li {
+  margin: 0 9px;
+}
+.desktop-topnav li:hover {
+  cursor: pointer;
+  color: #d6002f;
+}
+.desktop-topnav .actions .k-button {
+  padding: 0;
+}

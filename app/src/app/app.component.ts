@@ -1,6 +1,7 @@
 import { BottomNavigationSelectEvent } from '@progress/kendo-angular-navigation';
 import { Router } from '@angular/router';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from "rxjs";
 
 @Component({
@@ -10,12 +11,31 @@ import { Observable } from "rxjs";
     providers: [],
     encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     public items: Array<any> = [];
 
-    constructor(private router: Router) {
-        this.items = this.mapItems(router.config);
-        this.items[0].selected = true;
+    showMobile = true;
+
+    public kendokaAvatar = 'https://i.imgur.com/NRgYxRu.jpg';
+
+    ngOnInit() {
+      this.breakpointObserver
+        .observe(['(max-width: 768px)'])
+        .subscribe((state: BreakpointState) => {
+          if (state.matches) {
+            this.showMobile = true;
+          } else {
+            this.showMobile = false;
+          }
+        });
+    }
+
+    constructor(
+      public breakpointObserver: BreakpointObserver,
+      private router: Router
+    ) {
+      this.items = this.mapItems(router.config);
+      this.items[0].selected = true;
     }
 
     public onSelect(ev: BottomNavigationSelectEvent): void {
