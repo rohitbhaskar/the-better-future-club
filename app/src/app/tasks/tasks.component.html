@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <h4>Your Tasks 😉</h4>
+  <div *ngFor="let task of tasks">
+    <hr style="margin:30px 0">
+    <a class="message-wrapper" routerLink="/tasks/{{ task.id }}">
+        <kendo-avatar shape="circle" initials="{{ task.initials }}"></kendo-avatar>
+        <div>
+          <span class="message">{{ task.title }}</span>
+          <span class="message" style="font-style: oblique;">{{ task.company }}</span>
+        </div>
+        <span>[ {{ task.points }} ]</span>
+      </a>
+  </div>
+</div>

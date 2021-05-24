@@ -1,0 +1,49 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.example-wrapper {
+  /* width: 382px;
+  height: 630px; */
+  height: 100%;
+  padding-top: 30px;
+  /* box-shadow: 0px 10px 20px #00000029;
+  border-radius: 30px; */
+  margin: auto;
+  background: #F9F9F9;
+  /* border: 10px solid white; */
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13.5px;
+}
+
+.wrapper {
+  height: calc(100% - 57px);
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+h4 {
+  width: 100%;
+  padding-top: 45px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.28px;
+  color: #2962ff;
+  font-weight: 400;
+  padding-bottom: 55px;
+  margin-top: 0px;
+}
+
+.title-app-bar {
+  box-shadow: none;
+}
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13.5px;
+}
+
+

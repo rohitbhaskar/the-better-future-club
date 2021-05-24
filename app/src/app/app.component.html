@@ -1,0 +1,15 @@
+<kendo-appbar positionMode="fixed" class="title-app-bar">
+  <kendo-appbar-section>
+      <h1 class="title">The Better Future Club</h1>
+  </kendo-appbar-section>
+</kendo-appbar>
+
+<div class="example-wrapper">
+  <router-outlet></router-outlet>
+  <kendo-bottomnavigation
+      [items]="items"
+      positionMode="fixed"
+      [border]="true"
+      (select)="onSelect($event)">
+  </kendo-bottomnavigation>
+</div>

@@ -1,0 +1,46 @@
+/* profile */
+.wrapper {
+  height: calc(100% - 57px);
+  padding-left: 17px;
+  padding-right: 17px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email {
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.profile-calendars {
+  color: #656565;
+  font-weight: 600;
+}
+
+.bullet {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+
+.entry-title {
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+  padding-bottom: 22px;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+}
